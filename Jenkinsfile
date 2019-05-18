@@ -10,7 +10,15 @@ pipeline {
             steps {
                 sh 'mvn -B -DskipTests clean package' 
             }
-        },
+        }
+        // stage('Checkstyle') {
+        //     steps {
+        //         sh 'mvn checkstyle:checkstyle'
+        //         script {
+        //             checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
+        //         }
+        //     }
+        // }
         stage('Unit Test') {
             steps {
                 sh 'mvn test'
@@ -20,7 +28,7 @@ pipeline {
                     junit 'target/surefire-reports/*.xml'
                 }
             }
-        },
+        }
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
