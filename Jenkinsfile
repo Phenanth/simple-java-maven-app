@@ -11,14 +11,14 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
-        // stage('Checkstyle') {
-        //     steps {
-        //         sh 'mvn checkstyle:checkstyle'
-        //         script {
-        //             checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
-        //         }
-        //     }
-        // }
+        stage('Checkstyle') {
+            steps {
+                sh 'mvn checkstyle:checkstyle'
+                script {
+                    checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
+                }
+            }
+        }
         stage('Unit Test') {
             steps {
                 sh 'mvn test'
