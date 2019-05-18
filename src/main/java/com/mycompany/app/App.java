@@ -11,7 +11,7 @@ public class App
     public App() {}
 
     public static void main(String[] args) {
-    	int yes = 1;
+    	boolean yes = true;
     	if (yes) {
     		if (yes) {
     			System.out.println(new App().getMessage());
