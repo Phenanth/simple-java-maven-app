@@ -7,7 +7,7 @@ public class App
 {
 
     private final String message = "Hello World!";
-    public int bool = 1
+    public int bool = 1;
 
     public App() {}
 
