@@ -11,8 +11,9 @@ public class App
     public App() {}
 
     public static void main(String[] args) {
-    	if (null) {
-    		if (null) {
+
+    	if (message) {
+    		if (message) {
     			System.out.println(new App().getMessage());
     		}
     	}
