@@ -7,14 +7,13 @@ public class App
 {
 
     private final String message = "Hello World!";
-    public int bool = 1;
 
     public App() {}
 
     public static void main(String[] args) {
-
-    	if (bool) {
-    		if (bool) {
+    	int yes = 1;
+    	if (yes) {
+    		if (yes) {
     			System.out.println(new App().getMessage());
     		}
     	}
